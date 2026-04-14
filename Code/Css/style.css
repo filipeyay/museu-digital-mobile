@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.pai{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Imagens/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.login{
+    padding: 50px 70px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    input{
+        padding: 10px 15px;
+        font-size: 1rem;
+        background-color: white;
+    }
+    input::placeholder{
+        color: black;
+        opacity: 1;
+        font-size: 1rem;
+    }
+    }
+    h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    input[type="submit"]{
+        width: 100%;
+        color: black;
+        background-color: rgb(29, 179, 238);
+        font-size: 1.1rem;
+    }
+    a{
+        color: green;
+        text-decoration: none;
+    }
+.paiindex{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url(../Imagens/museu.png);
+
+}
+.textoindex{
+    text-align: center;
+    max-width: 500px;
+    h1{
+        text-align: center;
+        white-space: nowrap;
+        height: 50vh;
+        font-size: 100px;
+    }
+}
