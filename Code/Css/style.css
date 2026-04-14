@@ -31,7 +31,7 @@
     }
     }
     h1{
-
+        color: white;
         padding-bottom: 20px;
         font-size: 40px;
         text-align: center;
@@ -63,6 +63,7 @@
     max-width: 900px;
     margin: 0 auto;
     h1{
+        color: white;
         padding-top: 250px;
         font-size: 6rem;
         width: 100%;
@@ -71,6 +72,7 @@
         text-shadow: 0 0 10px black, 0 0 20px black;
     }
     p{
+        color: white;
         padding: 50px;
         padding-top: 90px;
         padding-bottom: 30px;
