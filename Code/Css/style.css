@@ -13,13 +13,15 @@
     background-repeat: no-repeat;
 }
 .login{
-    padding: 50px 70px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    padding: 60px 60px;
+    border-radius: 20px;
+    background-color: black;
     input{
-        padding: 10px 15px;
+        padding: 15px 20px;
         font-size: 1rem;
         background-color: white;
+        color: black;
+        border: 0;
     }
     input::placeholder{
         color: black;
@@ -28,35 +30,69 @@
     }
     }
     h1{
-        font-size: 2rem;
+
+        padding-bottom: 20px;
+        font-size: 40px;
         text-align: center;
     }
     input[type="submit"]{
         width: 100%;
         color: black;
-        background-color: rgb(29, 179, 238);
+        background-color: aqua;
         font-size: 1.1rem;
+        border: 0;
     }
     a{
-        color: green;
+        color: grey;
         text-decoration: none;
     }
 .paiindex{
     display: flex;
     height: 100vh;
     justify-content: center;
-    align-items: center;
     background-size: cover;
     background-image: url(../Imagens/museu.png);
 
 }
 .textoindex{
+    font-family: 'Old Standard TT';
     text-align: center;
-    max-width: 500px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
     h1{
-        text-align: center;
-        white-space: nowrap;
-        height: 50vh;
-        font-size: 100px;
+        padding-top: 250px;
+        font-size: 6rem;
+        width: 100%;
+        word-wrap: break-word;
+        font-weight: 300;
+        text-shadow: 0 0 10px black, 0 0 20px black;
     }
+    p{
+        padding: 50px;
+        padding-top: 90px;
+        padding-bottom: 30px;
+        font-size: x-large;
+        font-weight: 600;
+        text-shadow: 0 0 10px black, 0 0 20px black;
+    }
+    button{
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 20px;
+        font-size: 18px;
+        padding: 20px;
+        border: 0;
+        color: white;
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+    }
+}
+.barra{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid grey;
+    backdrop-filter: blur(10px);
 }
