@@ -2,7 +2,7 @@
 
 ### Sobre:
 **Objetivo:** Contruir um site usando apenas HTML5 e CSS3
-**Tema:** Musel Digital
+**Tema:** Museu Digital
 
 ### Alunos:
 - Enzo Ricardo (Ajudou no design e na estruturação)
