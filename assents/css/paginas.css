@@ -1,110 +1,113 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    .paleontologia-img{
-        background-image: url(../img/palentologia.webp);
-        background-size: cover;
-        padding: 200px 100px;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  .paleontologia-img {
+    background-image: url(../img/palentologia.webp);
+    background-size: cover;
+    padding: 200px 100px;
+  }
+  .paleontologia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      margin: 0;
     }
-    .paleontologia{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(22, 22, 22);
-        text-align: center;
-        h1{
-            font-size: 50px;
-            margin: 0;
-        }
-        p{
-            font-size: 18px;
-            margin: 0;
-        }
-        button{
-            margin: 15px;
-            border: none;
-            border-radius: 15px;
-            background-color: black;
-            color: white;
-            padding: 10px;
-        }
-        button:hover{
-            border: none;
-            background-color: white;
-            color: black;
-        }
+    p {
+      font-size: 18px;
+      margin: 0;
     }
-     .historia-img{
-        box-shadow: inset rgb(22, 22, 22) 0px 40px 20px;
-        background-image: url(../img/historia.webp);
-        background-size: cover;
-        padding: 200px 100px;
-        background-position: 0px -200px;
+    button {
+      margin: 15px;
+      border: none;
+      border-radius: 15px;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
     }
-    .historia{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(22, 22, 22);
-        text-align: center;
-        h1{
-            font-size: 50px;
-            margin: 0;
-        }
-        p{
-            font-size: 18px;
-            margin: 0;
-        }
-        button{
-            margin: 15px;
-            border-radius: 15px;
-            border: none;
-            background-color: black;
-            color: white;
-            padding: 10px;
-        }
-        button:hover{
-            border: none;
-            background-color: white;
-            color: black;
-        }
+    button:hover {
+      border: none;
+      background-color: white;
+      color: black;
     }
-    .dinossauros-img{
-        box-shadow: inset rgb(22, 22, 22) 0px 40px 20px;
-        background-image: url(../img/exibicao.webp);
-        background-size: cover;
-        padding: 200px 100px;
-        background-position: 0px -100px;
+  }
+  .historia-img {
+    box-shadow: inset rgb(22, 22, 22) 0px 40px 20px;
+    background-image: url(../img/historia.webp);
+    background-size: cover;
+    padding: 200px 100px;
+    background-position: 0px -200px;
+  }
+  .historia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      margin: 0;
     }
-    .dinossauros{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(22, 22, 22);
-        text-align: center;
-        padding-bottom: 20px;
-        h1{
-            font-size: 50px;
-            margin: 0;
-        }
-        p{
-            font-size: 18px;
-            margin: 0;
-        }
-        button{
-            margin: 15px;
-            border-radius: 15px;
-            border: none;
-            background-color: black;
-            color: white;
-            padding: 10px;
-        }
-        button:hover{
-            border: none;
-            background-color: white;
-            color: black;
-        }
+    p {
+      font-size: 18px;
+      margin: 0;
     }
+    button {
+      margin: 15px;
+      border-radius: 15px;
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      border: none;
+      background-color: white;
+      color: black;
+    }
+  }
+  .dinossauros-img {
+    box-shadow: inset rgb(22, 22, 22) 0px 40px 20px;
+    background-image: url(../img/exibicao.webp);
+    background-size: cover;
+    padding: 200px 100px;
+    background-position: 0px -100px;
+  }
+  .dinossauros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    padding-bottom: 20px;
+    h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
+    button {
+      margin: 15px;
+      border-radius: 15px;
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      border: none;
+      background-color: white;
+      color: black;
+    }
+  }
 }
