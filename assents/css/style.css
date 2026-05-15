@@ -192,7 +192,7 @@ body {
   }
 }
 
-/************** CHATBOT **************/
+/************** CHATBOT & BTNTOP **************/
 #chat-botao {
   position: fixed;
   bottom: 20px;
@@ -326,4 +326,32 @@ body {
 
 .input-area button:active {
   transform: scale(0.98);
+}
+
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  border-radius: 50%;
+  border: none;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#btnTop:hover {
+  transform: scale(1.1) rotate(-5deg);
+  background-color: #444;
 }
