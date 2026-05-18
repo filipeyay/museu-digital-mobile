@@ -1,0 +1,362 @@
+body {
+  h1{
+    font-family:'Times New Roman', Times, serif;
+  }
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  .cabeçalho {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.97);
+    color: white;
+    a {
+      color: white;
+      text-decoration: none;
+      padding-top: 30px;
+      margin: 10px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    p {
+      width: 80%;
+      font-size: 30px;
+    }
+    p:hover {
+      text-shadow: 0 0 10px white;
+    }
+  }
+  .imagem-primária {
+    background-image: url(../img/imagem-primaria.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .itens-primarios {
+      padding-top: 450px;
+      padding-left: 100px;
+      p {
+        text-shadow: 2px 2px 1px black;
+        padding-bottom: 10px;
+        margin: 0;
+        color: rgb(255, 255, 255);
+      }
+      h1 {
+        text-shadow: 4px 4px 2px black;
+        padding-bottom: 20px;
+        font-weight: 1;
+        margin: 0;
+        font-size: 60px;
+        color: white;
+      }
+      button {
+        padding: 20px;
+        padding-left: 70px;
+        padding-right: 70px;
+        text-align: center;
+        background-color: rgba(11, 11, 11, 0.7);
+        border: 2px black solid;
+        color: white;
+        border-radius: 10px;
+        transition: 300ms cubic-bezier(0.48, 0, 0.12, 1);
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 2px rgb(0, 0, 0) solid;
+      }
+    }
+  }
+  .informações {
+    background-image: url(../img/fundo-imformacoes.webp);
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    h1 {
+      margin: 0;
+      font-weight: 1;
+    }
+    .informação-1 {
+      padding-right: 200px;
+    }
+    .informação-2 {
+      padding-left: 200px;
+      padding-right: 200px;
+      border-left: 1px rgba(255, 255, 255, 0.6) solid;
+      border-right: 1px rgba(255, 255, 255, 0.6) solid;
+    }
+    .informação-3 {
+      padding-left: 200px;
+    }
+  }
+  .alunos {
+    background-image: url(../img/fundo.webp);
+    background-size: cover;
+  }
+  .painel-alunos1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    .enzo {
+      margin: 10px;
+      padding-right: 150px;
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 10px;
+      }
+      img {
+        border-radius: 20px;
+      }
+    }
+    .filipe {
+      margin: 10px;
+      padding-left: 150px;
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 10px;
+      }
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
+  .painel-alunos2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+    .iago {
+      margin: 10px;
+      padding-right: 150px;
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 10px;
+      }
+      img {
+        border-radius: 20px;
+      }
+    }
+    .marco {
+      margin: 10px;
+      padding-left: 150px;
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin: 10px;
+      }
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
+  .imagem-secundária {
+    background-image: url(../img/imagem-secundaria.webp);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    opacity: 0.999;
+  }
+  .rodapé {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    color: rgb(200, 200, 200);
+    p {
+      justify-content: center;
+      font-size: 10px;
+      margin: 20px;
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+  }
+  .divisao {
+    background-image: url(../img/divisao.webp);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+  }
+}
+
+/************** CHATBOT & BTNTOP **************/
+#chat-botao {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s;
+  z-index: 9999;
+}
+
+#chat-botao:hover {
+  transform: scale(1.1) rotate(5deg);
+  background-color: #444;
+}
+
+#chat-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background-color: #1a1a1a;
+  color: #efefef;
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 9999;
+  border: 1px solid #333;
+}
+
+#chat-log {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#perguntas-lista {
+  list-style: none;
+  padding: 10px;
+  background: #252525;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#perguntas-lista li {
+  color: #4db8ff;
+  padding: 5px 0;
+  font-size: 0.9em;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* container da area de input no rodapé do chat */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #252526;
+  border-top: 1px solid #333;
+  gap: 8px;
+}
+
+#usuario-input {
+  flex: 1;
+  background-color: #3c3c3c;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#usuario-input:focus {
+  border-color: #007fd4;
+}
+
+/* esconde aquelas setas de aumentar e diminuir o número no campo de input */
+#usuario-input::-webkit-inner-spin-button,
+#usuario-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* botao Enviar */
+.input-area button {
+  background-color: #007fd4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.input-area button:hover {
+  background-color: #0062a3;
+}
+
+.input-area button:active {
+  transform: scale(0.98);
+}
+
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  border-radius: 50%;
+  border: none;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#btnTop:hover {
+  transform: scale(1.1) rotate(-5deg);
+  background-color: #444;
+}
