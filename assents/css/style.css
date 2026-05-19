@@ -12,11 +12,14 @@ body {
     justify-content: center;
     background-color: rgb(0, 0, 0, 0.97);
     color: white;
+    
     a {
       color: white;
       text-decoration: none;
       padding-top: 30px;
       margin: 10px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
     }
     a:hover {
       text-decoration: underline;
@@ -40,27 +43,34 @@ body {
       padding-top: 450px;
       padding-left: 100px;
       p {
-        text-shadow: 2px 2px 1px black;
-        padding-bottom: 10px;
+        text-shadow: 2px 2px 1px rgb(0, 0, 0);
+        padding-bottom: 30px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 1;
         margin: 0;
         color: rgb(255, 255, 255);
       }
       h1 {
-        text-shadow: 4px 4px 2px black;
+
         padding-bottom: 20px;
-        font-weight: 1;
         margin: 0;
-        font-size: 60px;
+        font-family:Cambria, thin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 1;
+        font-size: 70px;
         color: white;
+        text-shadow: 4px 4px 2px black;
       }
       button {
-        padding: 20px;
-        padding-left: 70px;
-        padding-right: 70px;
+        padding: 18px;
+        padding-left: 60px;
+        padding-right: 60px;
         text-align: center;
         background-color: rgba(11, 11, 11, 0.7);
         border: 2px black solid;
         color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 1;
+        font-size: 25px;
         border-radius: 10px;
         transition: 300ms cubic-bezier(0.48, 0, 0.12, 1);
         cursor: pointer;
@@ -335,10 +345,10 @@ body {
 
 #btnTop {
   position: fixed;
-  bottom: 20px;
-  left: 30px;
-  width: 60px;
-  height: 60px;
+  bottom: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   z-index: 99;
@@ -352,7 +362,9 @@ body {
     transform 0.3s ease,
     background-color 0.3s;
   padding: 15px;
-  border-radius: 10px;
+  padding-top: 5px;
+  padding-left: 14px;
+  border-radius: 30px;
   cursor: pointer;
 }
 

@@ -250,10 +250,10 @@ body {
 
 #btnTop {
   position: fixed;
-  bottom: 20px;
-  left: 30px;
-  width: 60px;
-  height: 60px;
+  bottom: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   z-index: 99;
@@ -267,7 +267,9 @@ body {
     transform 0.3s ease,
     background-color 0.3s;
   padding: 15px;
-  border-radius: 10px;
+  padding-top: 5px;
+  padding-left: 14px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
