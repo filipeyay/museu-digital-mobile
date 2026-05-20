@@ -1,6 +1,6 @@
 body {
-  h1{
-    font-family:'Times New Roman', Times, serif;
+  h1 {
+    font-family: "Times New Roman", Times, serif;
   }
   margin: 0;
   padding: 0;
@@ -12,14 +12,24 @@ body {
     justify-content: center;
     background-color: rgb(0, 0, 0, 0.97);
     color: white;
-    
+
     a {
       color: white;
       text-decoration: none;
       padding-top: 30px;
       margin: 10px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
     }
     a:hover {
       text-decoration: underline;
@@ -45,16 +55,26 @@ body {
       p {
         text-shadow: 2px 2px 1px rgb(0, 0, 0);
         padding-bottom: 30px;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
         font-weight: 1;
         margin: 0;
         color: rgb(255, 255, 255);
       }
       h1 {
-
         padding-bottom: 20px;
         margin: 0;
-        font-family:Cambria, thin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Cambria, thin, Georgia, Times, "Times New Roman", serif;
         font-weight: 1;
         font-size: 70px;
         color: white;
@@ -68,7 +88,18 @@ body {
         background-color: rgba(11, 11, 11, 0.7);
         border: 2px black solid;
         color: white;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
         font-weight: 1;
         font-size: 25px;
         border-radius: 10px;
@@ -345,10 +376,10 @@ body {
 
 #btnTop {
   position: fixed;
-  bottom: 10px;
-  left: 10px;
-  width: 40px;
-  height: 40px;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
   align-items: center;
   justify-content: center;
   z-index: 99;
@@ -362,8 +393,8 @@ body {
     transform 0.3s ease,
     background-color 0.3s;
   padding: 15px;
-  padding-top: 5px;
-  padding-left: 14px;
+  padding-top: 10px;
+  padding-left: 15px;
   border-radius: 30px;
   cursor: pointer;
 }
