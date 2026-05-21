@@ -2,9 +2,11 @@ body {
   h1 {
     font-family: "Times New Roman", Times, serif;
   }
+
   margin: 0;
   padding: 0;
   background-color: black;
+
   .cabeçalho {
     display: flex;
     position: fixed;
@@ -31,17 +33,21 @@ body {
         "Helvetica Neue",
         sans-serif;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     p {
       width: 80%;
       font-size: 30px;
     }
+
     p:hover {
       text-shadow: 0 0 10px white;
     }
   }
+
   .imagem-primária {
     background-image: url(../img/imagem-primaria.webp);
     background-repeat: no-repeat;
@@ -49,9 +55,11 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+
     .itens-primarios {
       padding-top: 450px;
       padding-left: 100px;
+
       p {
         text-shadow: 2px 2px 1px rgb(0, 0, 0);
         padding-bottom: 30px;
@@ -71,6 +79,7 @@ body {
         margin: 0;
         color: rgb(255, 255, 255);
       }
+
       h1 {
         padding-bottom: 20px;
         margin: 0;
@@ -80,6 +89,7 @@ body {
         color: white;
         text-shadow: 4px 4px 2px black;
       }
+
       button {
         padding: 18px;
         padding-left: 60px;
@@ -106,6 +116,7 @@ body {
         transition: 300ms cubic-bezier(0.48, 0, 0.12, 1);
         cursor: pointer;
       }
+
       button:hover {
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
@@ -113,6 +124,7 @@ body {
       }
     }
   }
+
   .informações {
     background-image: url(../img/fundo-imformacoes.webp);
     color: white;
@@ -122,93 +134,117 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+
     h1 {
       margin: 0;
       font-weight: 1;
     }
+
     .informação-1 {
       padding-right: 200px;
     }
+
     .informação-2 {
       padding-left: 200px;
       padding-right: 200px;
       border-left: 1px rgba(255, 255, 255, 0.6) solid;
       border-right: 1px rgba(255, 255, 255, 0.6) solid;
     }
+
     .informação-3 {
       padding-left: 200px;
     }
   }
+
   .alunos {
     background-image: url(../img/fundo.webp);
     background-size: cover;
   }
+
   .painel-alunos1 {
     color: white;
     display: flex;
     justify-content: center;
     text-align: center;
     padding-top: 20px;
+
     .enzo {
       margin: 10px;
       padding-right: 150px;
+
       h1 {
         margin: 0;
       }
+
       p {
         margin: 10px;
       }
+
       img {
         border-radius: 20px;
       }
     }
+
     .filipe {
       margin: 10px;
       padding-left: 150px;
+
       h1 {
         margin: 0;
       }
+
       p {
         margin: 10px;
       }
+
       img {
         border-radius: 20px;
       }
     }
   }
+
   .painel-alunos2 {
     color: white;
     display: flex;
     justify-content: center;
     text-align: center;
     padding-bottom: 30px;
+
     .iago {
       margin: 10px;
       padding-right: 150px;
+
       h1 {
         margin: 0;
       }
+
       p {
         margin: 10px;
       }
+
       img {
         border-radius: 20px;
       }
     }
+
     .marco {
       margin: 10px;
       padding-left: 150px;
+
       h1 {
         margin: 0;
       }
+
       p {
         margin: 10px;
       }
+
       img {
         border-radius: 20px;
       }
     }
   }
+
   .imagem-secundária {
     background-image: url(../img/imagem-secundaria.webp);
     width: 100%;
@@ -216,12 +252,14 @@ body {
     background-size: cover;
     opacity: 0.999;
   }
+
   .rodapé {
     text-align: center;
     justify-content: center;
     display: flex;
     background-color: black;
     color: rgb(200, 200, 200);
+
     p {
       justify-content: center;
       font-size: 10px;
@@ -230,6 +268,7 @@ body {
       padding-right: 300px;
     }
   }
+
   .divisao {
     background-image: url(../img/divisao.webp);
     width: 100%;
@@ -312,6 +351,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -376,6 +416,7 @@ body {
 
 #btnTop {
   position: fixed;
+  display: none;
   bottom: 20px;
   left: 20px;
   width: 60px;

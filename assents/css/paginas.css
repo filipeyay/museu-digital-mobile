@@ -3,25 +3,30 @@ body {
   padding: 0;
   background-color: black;
   color: white;
+
   .paleontologia-img {
     background-image: url(../img/palentologia.webp);
     background-size: cover;
     padding: 200px 100px;
   }
+
   .paleontologia {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(22, 22, 22);
     text-align: center;
+
     h1 {
       font-size: 50px;
       margin: 0;
     }
+
     p {
       font-size: 18px;
       margin: 0;
     }
+
     button {
       margin: 15px;
       border: none;
@@ -31,12 +36,14 @@ body {
       padding: 10px;
       cursor: pointer;
     }
+
     button:hover {
       border: none;
       background-color: white;
       color: black;
     }
   }
+
   .historia-img {
     box-shadow: inset rgb(22, 22, 22) 0px 40px 20px;
     background-image: url(../img/historia.webp);
@@ -44,20 +51,24 @@ body {
     padding: 200px 100px;
     background-position: 0px -200px;
   }
+
   .historia {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(22, 22, 22);
     text-align: center;
+
     h1 {
       font-size: 50px;
       margin: 0;
     }
+
     p {
       font-size: 18px;
       margin: 0;
     }
+
     button {
       margin: 15px;
       border-radius: 15px;
@@ -67,12 +78,14 @@ body {
       padding: 10px;
       cursor: pointer;
     }
+
     button:hover {
       border: none;
       background-color: white;
       color: black;
     }
   }
+
   .dinossauros-img {
     box-shadow: inset rgb(22, 22, 22) 0px 40px 20px;
     background-image: url(../img/exibicao.webp);
@@ -80,6 +93,7 @@ body {
     padding: 200px 100px;
     background-position: 0px -100px;
   }
+
   .dinossauros {
     display: flex;
     justify-content: center;
@@ -87,14 +101,17 @@ body {
     background-color: rgb(22, 22, 22);
     text-align: center;
     padding-bottom: 20px;
+
     h1 {
       font-size: 50px;
       margin: 0;
     }
+
     p {
       font-size: 18px;
       margin: 0;
     }
+
     button {
       margin: 15px;
       border-radius: 15px;
@@ -104,6 +121,7 @@ body {
       padding: 10px;
       cursor: pointer;
     }
+
     button:hover {
       border: none;
       background-color: white;
@@ -186,6 +204,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -250,6 +269,7 @@ body {
 
 #btnTop {
   position: fixed;
+  display: none;
   bottom: 20px;
   left: 20px;
   width: 60px;
@@ -276,4 +296,33 @@ body {
 #btnTop:hover {
   transform: scale(1.1) rotate(-5deg);
   background-color: #444;
+}
+
+#indicador {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 75px;
+  font-size: 24px;
+  border: none;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  padding-top: 10px;
+  border-radius: 40px;
+  animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
 }
