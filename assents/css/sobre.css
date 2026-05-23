@@ -4,6 +4,9 @@ body{
     .introdução{
         text-align: center;
         padding-bottom: 50px;
+        h2{
+          border-bottom: 1px white solid;
+        }
     }
     .informações{
         display: flex;
