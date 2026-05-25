@@ -2,6 +2,7 @@ body{
     margin: 0;
     background-image: url(../img/background-paleontolia.webp);
     background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     .principal{
         padding: 20px;
         background-color: rgba(0, 0, 0, 0.8);
