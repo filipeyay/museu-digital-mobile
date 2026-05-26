@@ -1,36 +1,269 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../assents/css/sobre.css">
-    <title>Sobre nós</title>
-    <link rel="icon" href="../assents/img/dino.svg" type="image/svg+xml" />
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MUSEU DIGITAL - Sobre Nós</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-container": "#d1e4ff",
+                        "inverse-primary": "#5d5f5f",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "primary": "#ffffff",
+                        "inverse-surface": "#e2e2e2",
+                        "muted-stone": "#252526",
+                        "on-background": "#e2e2e2",
+                        "surface-tint": "#c6c6c7",
+                        "surface-container-low": "#1b1b1b",
+                        "on-primary": "#2f3131",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#0067ae",
+                        "outline-variant": "#444748",
+                        "on-tertiary-fixed": "#001d36",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#1a99de",
+                        "surface": "#131313",
+                        "on-primary-container": "#636565",
+                        "tertiary-fixed": "#d1e4ff",
+                        "on-surface-variant": "#c4c7c8",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-primary-fixed-variant": "#454747",
+                        "secondary-fixed-dim": "#8fcdff",
+                        "on-tertiary-fixed-variant": "#00497d",
+                        "on-secondary": "#003450",
+                        "primary-container": "#e2e2e2",
+                        "on-primary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#cbe6ff",
+                        "on-tertiary": "#003258",
+                        "tertiary-fixed-dim": "#9fcaff",
+                        "deep-earth": "#1a1a1a",
+                        "on-surface": "#e2e2e2",
+                        "on-secondary-fixed": "#001e30",
+                        "surface-container": "#1f1f1f",
+                        "surface-container-highest": "#353535",
+                        "surface-glass": "rgba(11, 11, 11, 0.7)",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#8e9192",
+                        "divider-line": "rgba(255, 255, 255, 0.6)",
+                        "on-secondary-container": "#002d46",
+                        "surface-bright": "#393939",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#004b71",
+                        "tertiary": "#ffffff",
+                        "secondary": "#8fcdff",
+                        "surface-variant": "#353535"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "xl": "48px",
+                        "gutter-mobile": "16px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "margin-mobile": "20px",
+                        "md": "16px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "section-title": ["EB Garamond"],
+                        "display-hero": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "headline-lg-mobile": ["EB Garamond"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "section-title": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-hero": ["70px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "caption": ["10px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bloom-hover:hover {
+            text-shadow: 0 0 10px white;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
-<body>
-    <div class="introdução">
-        <button onclick="history.go(-1)">←</button>
-        <h1>Sobre nós</h1>
-        <h2>Aqui mostramos um pouco sobre cada participante do trabalho</h2>
-    </div>
-    <div class="informações">
-        <div class="aluno1">
-            <img src="../assents/img/enzo.webp">
-            <h1>Enzo Ricardo</h1><hr>
-            <p>Enzo desempenhou um papel fundamental nas etapas estratégicas do projeto. Foi responsável pela análise inicial e pelo planejamento estrutural do site, além de colaborar ativamente no desenvolvimento do design da interface (UI/UX) e na elaboração da documentação técnica, garantindo que o projeto seguisse os requisitos estabelecidos.</p>
-        </div>
-        <div class="aluno1">
-            <img src="../assents/img/iago.webp">
-            <h1>Iago Nóbrega</h1><hr>
-            <p>Iago foi o principal pilar de suporte informacional e conceitual do grupo. Atuou diretamente na idealização do projeto, na pesquisa de fontes confiáveis e no levantamento de recursos essenciais para a construção do site, além de estruturar e revisar a documentação textual da aplicação.</p>
-        </div><div class="aluno1">
-            <img src="../assents/img/filipe.webp">
-            <h1>Filipe Andrade</h1><hr>
-            <p>Filipe ficou encarregado da camada de interatividade do site, sendo o desenvolvedor responsável pela criação e implementação do chatbot em JavaScript. Além disso, deu suporte técnico essencial na estruturação e estilização do código utilizando HTML e CSS.</p>
-        </div><div class="aluno1">
-            <img src="../assents/img/marco.webp">
-            <h1>Marco Antônio</h1><hr>
-            <p>Marco transformou os conceitos em realidade funcional, liderando o desenvolvimento do front-end através da escrita do código em HTML e CSS. Também atuou na organização e refinamento das ideias do grupo, garantindo que o layout final fosse fiel à proposta planejada.</p>
-        </div>
-    </div>
-</body>
-</html>
+<body class="bg-background text-on-surface min-h-screen flex flex-col relative overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="bg-surface-glass dark:bg-surface-glass backdrop-blur-md fixed top-0 w-full z-50 border-b border-divider-line flex justify-between items-center h-16 px-margin-mobile w-full">
+<button aria-label="Menu" class="text-primary dark:text-primary scale-95 active:scale-90 transition-transform hover:opacity-80 transition-opacity flex items-center justify-center p-sm -ml-sm" id="menu-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-widest uppercase">MUSEU DIGITAL</h1>
+<div class="w-10"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- Drawer Overlay -->
+<div class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<nav class="fixed inset-y-0 left-0 z-[60] flex flex-col py-lg bg-deep-earth dark:bg-deep-earth h-full w-80 rounded-r-xl border-r border-divider-line shadow-xl -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="px-md mb-lg flex justify-between items-center">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">EXPLORAÇÃO</h2>
+<button aria-label="Close menu" class="text-on-surface-variant hover:text-primary transition-colors" id="close-drawer-btn">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<ul class="flex flex-col gap-sm flex-grow font-body-md text-body-md">
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span>Eras Geológicas</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Escavações</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="museum">museum</span>
+<span>Fósseis</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md bg-surface-container-highest text-primary rounded-lg px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span>Sobre o Museu</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-xl px-margin-mobile flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="text-center flex flex-col gap-md fade-in-up">
+<h2 class="font-display-hero text-display-hero text-primary">Sobre Nós</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Conheça a equipe de estudantes por trás da criação deste museu digital, dedicada a preservar e compartilhar a história da vida na Terra através da tecnologia.
+            </p>
+<div class="w-24 h-px bg-divider-line mx-auto mt-sm"></div>
+</section>
+<!-- Students Grid (Mobile: 1 column vertical list as requested) -->
+<section class="flex flex-col gap-lg">
+<!-- Student Card: Enzo -->
+<article class="bg-surface-glass backdrop-blur-md rounded-lg p-md border-t border-divider-line flex flex-col items-center text-center gap-md fade-in-up" style="animation-delay: 0.1s;">
+<div class="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/20 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+<img alt="Foto de Enzo" class="w-full h-full object-cover" data-alt="A cinematic, high-contrast portrait of a young male student in a dark, moody environment. He is wearing a dark shirt, lit by soft, dramatic directional lighting that highlights his facial features against a pitch-black background, evoking a sophisticated, scholarly atmosphere consistent with a high-end digital museum exhibit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Enzo</h3>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-xs">Curador Digital</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Responsável pela catalogação dos artefatos digitais e estruturação do banco de dados do museu, garantindo a integridade da informação histórica.
+                </p>
+</article>
+<!-- Student Card: Iago -->
+<article class="bg-surface-glass backdrop-blur-md rounded-lg p-md border-t border-divider-line flex flex-col items-center text-center gap-md fade-in-up" style="animation-delay: 0.2s;">
+<div class="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/20 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+<img alt="Foto de Iago" class="w-full h-full object-cover" data-alt="A cinematic, high-contrast portrait of a young male student in a dark, moody environment. He has short hair and a focused expression, lit by soft, dramatic directional lighting that highlights his facial features against a pitch-black background, evoking a sophisticated, scholarly atmosphere consistent with a high-end digital museum exhibit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Iago</h3>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-xs">Desenvolvedor Frontend</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Focado na criação da interface imersiva, utilizando técnicas de glassmorphism e iluminação dinâmica para proporcionar uma experiência visual única.
+                </p>
+</article>
+<!-- Student Card: Filipe -->
+<article class="bg-surface-glass backdrop-blur-md rounded-lg p-md border-t border-divider-line flex flex-col items-center text-center gap-md fade-in-up" style="animation-delay: 0.3s;">
+<div class="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/20 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+<img alt="Foto de Filipe" class="w-full h-full object-cover" data-alt="A cinematic, high-contrast portrait of a young male student in a dark, moody environment. He is looking directly at the camera, lit by soft, dramatic directional lighting that highlights his facial features against a pitch-black background, evoking a sophisticated, scholarly atmosphere consistent with a high-end digital museum exhibit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Filipe</h3>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-xs">Especialista 3D</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Encarregado da modelagem e texturização dos fósseis em 3D, trazendo realismo tátil aos espécimes virtuais exibidos no museu.
+                </p>
+</article>
+<!-- Student Card: Marco -->
+<article class="bg-surface-glass backdrop-blur-md rounded-lg p-md border-t border-divider-line flex flex-col items-center text-center gap-md fade-in-up" style="animation-delay: 0.4s;">
+<div class="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/20 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+<img alt="Foto de Marco" class="w-full h-full object-cover" data-alt="A cinematic, high-contrast portrait of a young male student in a dark, moody environment. He has a slight smile, lit by soft, dramatic directional lighting that highlights his facial features against a pitch-black background, evoking a sophisticated, scholarly atmosphere consistent with a high-end digital museum exhibit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Marco</h3>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-xs">Pesquisador Conteudista</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Responsável pela pesquisa histórica e redação dos textos educativos, garantindo a precisão científica e a narrativa cinematográfica do projeto.
+                </p>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface border-t border-divider-line w-full py-xl px-margin-mobile flex flex-col items-center gap-sm mt-auto">
+<ul class="flex gap-md font-caption text-caption">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100 transition-opacity" href="#">Privacidade</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100 transition-opacity" href="#">Termos</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100 transition-opacity" href="#">Contato</a></li>
+</ul>
+<p class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant mt-sm">© 2024 MUSEU DIGITAL. TODOS OS DIREITOS RESERVADOS.</p>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-drawer-btn');
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+
+            function toggleDrawer() {
+                drawer.classList.toggle('-translate-x-full');
+                overlay.classList.toggle('hidden');
+            }
+
+            menuBtn.addEventListener('click', toggleDrawer);
+            closeBtn.addEventListener('click', toggleDrawer);
+            overlay.addEventListener('click', toggleDrawer);
+        });
+    </script>
+</body></html>

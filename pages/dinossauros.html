@@ -1,95 +1,318 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dinossauros</title>
-  <link href="../assents/css/dinossauros.css" rel="stylesheet">
-  <link rel="icon" href="../assents/img/dino.svg" type="image/svg+xml" />
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeria de Dinossauros</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-container": "#d1e4ff",
+                        "inverse-primary": "#5d5f5f",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "primary": "#ffffff",
+                        "inverse-surface": "#e2e2e2",
+                        "muted-stone": "#252526",
+                        "on-background": "#e2e2e2",
+                        "surface-tint": "#c6c6c7",
+                        "surface-container-low": "#1b1b1b",
+                        "on-primary": "#2f3131",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#0067ae",
+                        "outline-variant": "#444748",
+                        "on-tertiary-fixed": "#001d36",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#1a99de",
+                        "surface": "#131313",
+                        "on-primary-container": "#636565",
+                        "tertiary-fixed": "#d1e4ff",
+                        "on-surface-variant": "#c4c7c8",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-primary-fixed-variant": "#454747",
+                        "secondary-fixed-dim": "#8fcdff",
+                        "on-tertiary-fixed-variant": "#00497d",
+                        "on-secondary": "#003450",
+                        "primary-container": "#e2e2e2",
+                        "on-primary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#cbe6ff",
+                        "on-tertiary": "#003258",
+                        "tertiary-fixed-dim": "#9fcaff",
+                        "deep-earth": "#1a1a1a",
+                        "on-surface": "#e2e2e2",
+                        "on-secondary-fixed": "#001e30",
+                        "surface-container": "#1f1f1f",
+                        "surface-container-highest": "#353535",
+                        "surface-glass": "rgba(11, 11, 11, 0.7)",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#8e9192",
+                        "divider-line": "rgba(255, 255, 255, 0.6)",
+                        "on-secondary-container": "#002d46",
+                        "surface-bright": "#393939",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#004b71",
+                        "tertiary": "#ffffff",
+                        "secondary": "#8fcdff",
+                        "surface-variant": "#353535"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "xl": "48px",
+                        "gutter-mobile": "16px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "margin-mobile": "20px",
+                        "md": "16px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "section-title": ["EB Garamond"],
+                        "display-hero": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "headline-lg-mobile": ["EB Garamond"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "section-title": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-hero": ["70px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "caption": ["10px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glass-panel {
+            background: theme('colors.surface-glass');
+            backdrop-filter: blur(12px);
+            border-top: 1px solid theme('colors.divider-line');
+        }
+
+        .glow-hover:hover {
+            text-shadow: 0 0 10px white;
+        }
+        
+        /* Subtle texture overlay */
+        .texture-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
+<body class="relative min-h-screen pb-xl">
+<div class="texture-overlay"></div>
+<!-- Navigation Drawer -->
+<div class="fixed inset-0 bg-black/60 z-50 hidden transition-opacity duration-300 opacity-0 backdrop-blur-sm" id="nav-backdrop"></div>
+<aside class="fixed top-0 left-0 w-72 h-full bg-surface-glass backdrop-blur-xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out border-r border-divider-line overflow-y-auto" id="nav-drawer">
+<div class="p-md flex justify-between items-center border-b border-divider-line/30 h-16">
+<h2 class="font-headline-lg-mobile text-[20px] text-primary uppercase tracking-widest">Menu</h2>
+<button class="text-primary scale-95 active:scale-90 transition-transform hover:opacity-80" id="close-menu-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="p-md flex flex-col gap-sm font-body-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors py-sm border-b border-divider-line/10" href="#intro">Introdução</a>
+<a class="hover:text-primary transition-colors py-sm border-b border-divider-line/10" href="#t-rex">Tiranossauro Rex</a>
+<a class="hover:text-primary transition-colors py-sm border-b border-divider-line/10" href="#velociraptor">Velociraptor</a>
+<a class="hover:text-primary transition-colors py-sm border-b border-divider-line/10" href="#triceratops">Tricerátops</a>
+<a class="hover:text-primary transition-colors py-sm border-b border-divider-line/10" href="#espinossauro">Espinossauro</a>
+<a class="hover:text-primary transition-colors py-sm border-b border-divider-line/10" href="#braquiossauro">Braquiossauro</a>
+</nav>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-glass dark:bg-surface-glass backdrop-blur-md border-b border-divider-line flex justify-between items-center h-16 px-margin-mobile">
+<button class="text-primary dark:text-primary scale-95 active:scale-90 transition-transform hover:opacity-80" id="menu-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-widest uppercase">MUSEU DIGITAL</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-margin-mobile flex flex-col gap-xl">
+<!-- Intro Hero Section -->
+<section class="text-center py-lg scroll-mt-24" id="intro">
+<h2 class="font-display-hero text-display-hero text-primary mb-sm">Fósseis</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">Explore os gigantes que dominaram a Terra em nossa exposição virtual. Detalhes minuciosos de suas características e hábitos.</p>
+</section>
+<!-- T-Rex -->
+<article class="glass-panel rounded-xl overflow-hidden relative group scroll-mt-24" id="t-rex">
+<div class="h-64 bg-deep-earth relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="A highly cinematic and dramatic rendering of a Tyrannosaurus Rex skeleton emerging from shadows in a dark, museum-like setting. The lighting is sophisticated and moody, with sharp spotlighting highlighting the jagged teeth and bone textures. Deep blacks and atmospheric fog create a sense of scale and awe. The style is hyper-realistic and educational." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+</div>
+<div class="p-lg relative">
+<h3 class="font-section-title text-section-title text-primary mb-sm">Tiranossauro Rex</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">O predador ápice do período Cretáceo. Conhecido por sua mordida devastadora e braços curtos, era uma força formidável na cadeia alimentar.</p>
+<div class="border-t border-divider-line/30 pt-sm mt-sm">
+<ul class="flex flex-col gap-xs font-label-sm text-label-sm text-secondary">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">straighten</span> Comprimento: Até 12 metros</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">monitor_weight</span> Peso: Aprox. 8 toneladas</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">restaurant</span> Dieta: Carnívoro</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- Velociraptor -->
+<article class="glass-panel rounded-xl overflow-hidden relative group scroll-mt-24" id="velociraptor">
+<div class="h-64 bg-deep-earth relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="A striking visual of a Velociraptor fossil exhibit illuminated by soft, cool-toned museum lighting against a pure dark background. The scene emphasizes the agility and sharp features of the raptor, particularly its iconic curved claw. The atmosphere is quiet, educational, and cinematic, using dramatic shadows to enhance the tactile feel of the fossilized stone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+</div>
+<div class="p-lg relative">
+<h3 class="font-section-title text-section-title text-primary mb-sm">Velociraptor</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Pequeno, ágil e altamente inteligente. Famoso pela garra em forma de foice em cada pé, era um caçador de emboscada eficiente.</p>
+<div class="border-t border-divider-line/30 pt-sm mt-sm">
+<ul class="flex flex-col gap-xs font-label-sm text-label-sm text-secondary">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">straighten</span> Comprimento: Até 2 metros</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">monitor_weight</span> Peso: 15-20 kg</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">speed</span> Atributo: Alta velocidade</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- Tricerátops -->
+<article class="glass-panel rounded-xl overflow-hidden relative group scroll-mt-24" id="triceratops">
+<div class="h-64 bg-deep-earth relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="A macro shot of a Triceratops skull fossil, focusing on its massive frill and three distinct horns. The lighting is low-key and dramatic, simulating a high-end natural history museum exhibition at night. Dust particles float slightly in the air. The color palette is restricted to deep blacks, greys, and the warm, earthy tones of ancient bone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+</div>
+<div class="p-lg relative">
+<h3 class="font-section-title text-section-title text-primary mb-sm">Tricerátops</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Um herbívoro robusto com uma cabeça inconfundível. Seus três chifres e escudo ósseo forneciam defesa contra predadores imensos.</p>
+<div class="border-t border-divider-line/30 pt-sm mt-sm">
+<ul class="flex flex-col gap-xs font-label-sm text-label-sm text-secondary">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">straighten</span> Comprimento: Até 9 metros</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">shield</span> Defesa: Escudo ósseo e chifres</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">grass</span> Dieta: Herbívoro</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- Espinossauro -->
+<article class="glass-panel rounded-xl overflow-hidden relative group scroll-mt-24" id="espinossauro">
+<div class="h-64 bg-deep-earth relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="An imposing silhouette of a Spinosaurus skeleton with its distinctive dorsal sail, set against a dark, moody background. Subtle blue luminescent accents highlight the aquatic nature of this predator. The setting feels like an underwater or deeply shaded museum gallery, emphasizing mystery and ancient history with high contrast and tactile realism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+</div>
+<div class="p-lg relative">
+<h3 class="font-section-title text-section-title text-primary mb-sm">Espinossauro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">O maior dinossauro carnívoro conhecido, adaptado para a vida semi-aquática. Sua impressionante vela nas costas é sua marca registrada.</p>
+<div class="border-t border-divider-line/30 pt-sm mt-sm">
+<ul class="flex flex-col gap-xs font-label-sm text-label-sm text-secondary">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">straighten</span> Comprimento: Até 15 metros</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">water_drop</span> Habitat: Semi-aquático</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">restaurant</span> Dieta: Piscívoro/Carnívoro</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- Braquiossauro -->
+<article class="glass-panel rounded-xl overflow-hidden relative group scroll-mt-24" id="braquiossauro">
+<div class="h-64 bg-deep-earth relative">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="A towering Brachiosaurus skeleton rendered in a dark, expansive museum hall. The perspective is looking upwards from the ground, emphasizing the colossal height of the creature's neck. Soft, warm directional light cascades down from above, creating a sense of majesty and monumental scale against the pitch-black void of the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim to-transparent"></div>
+</div>
+<div class="p-lg relative">
+<h3 class="font-section-title text-section-title text-primary mb-sm">Braquiossauro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Um dos gigantes do período Jurássico. Com seu pescoço longo, alcançava a folhagem mais alta, vivendo em um ritmo lento e majestoso.</p>
+<div class="border-t border-divider-line/30 pt-sm mt-sm">
+<ul class="flex flex-col gap-xs font-label-sm text-label-sm text-secondary">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">straighten</span> Altura: Até 13 metros</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">monitor_weight</span> Peso: Aprox. 40 toneladas</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-[16px]">grass</span> Dieta: Herbívoro topo-de-árvore</li>
+</ul>
+</div>
+</div>
+</article>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin-mobile flex flex-col items-center gap-sm bg-surface dark:bg-surface border-t border-divider-line mt-xl">
+<div class="flex gap-md mb-sm">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100 transition-opacity" href="#">Privacidade</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100 transition-opacity" href="#">Termos</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100 transition-opacity" href="#">Contato</a>
+</div>
+<p class="font-caption text-caption text-on-surface-variant dark:text-on-surface-variant text-center opacity-70">© 2024 MUSEU DIGITAL. TODOS OS DIREITOS RESERVADOS.</p>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-menu-btn');
+    const backdrop = document.getElementById('nav-backdrop');
+    const drawer = document.getElementById('nav-drawer');
+    const links = drawer.querySelectorAll('a');
 
-<body>
-  <div class="cabeçalho">
-    <button onclick="history.go(-1)">←</button>
-    <p>MUSEU DIGITAL</p>
-    <a href="https://www.iesp.edu.br/">Faculdade</a>
-    <a href="sobre.html">Sobre nós</a>
-    <a href="../index.html">Home</a>
-  </div>
-  <div class="principal">
-    <h1>História dos Dinossauros</h1>
-    <h2>Tiranossauro Rex</h2>
-    <p>O Tiranossauro rex foi um dos maiores predadores que já viveram na Terra. Ele viveu no final do Período Cretáceo, há cerca de 68 a 66 milhões de anos, na região que hoje corresponde à América do Norte.</p>
-    <p>O nome “Tiranossauro rex” significa “rei dos lagartos tiranos”. Ele podia medir cerca de 12 metros de comprimento, chegar a quase 4 metros de altura e pesar mais de 8 toneladas. Apesar dos braços pequenos, tinha pernas fortes, visão excelente e uma mordida extremamente poderosa.</p>
-    <ul>
-      <li>pele coberta parcialmente por escamas;</li>
-      <li>excelente olfato;</li>
-      <li>dentes serrilhados que eram substituídos ao longo da vida;</li>
-      <li>parentes próximos com penas, embora o T. rex adulto provavelmente tivesse poucas penas.</li>
-    </ul>
-    <img src="../assents/img/rex.webp" height="500px" width="800px">
-    <p>O T. rex fazia parte do grupo dos terópodes, dinossauros carnívoros que andavam sobre duas patas. Cientistas acreditam que ele era tanto caçador quanto oportunista, podendo também comer animais já mortos.</p>
+    function openDrawer() {
+      backdrop.classList.remove('hidden');
+      // Force reflow
+      void backdrop.offsetWidth;
+      backdrop.classList.remove('opacity-0');
+      backdrop.classList.add('opacity-100');
+      
+      drawer.classList.remove('-translate-x-full');
+    }
+
+    function closeDrawer() {
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      
+      drawer.classList.add('-translate-x-full');
+      
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    menuBtn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
     
-    <h2>Velociraptor</h2>
-    <p>O Velociraptor foi um dinossauro carnívoro que viveu durante o Período Cretáceo, há cerca de 75 a 71 milhões de anos, na região onde hoje ficam a Mongólia e partes da China.</p>
-    <p>Apesar de muitos filmes mostrarem o Velociraptor como um animal grande, na vida real ele era bem menor: tinha aproximadamente o tamanho de um peru grande ou de um cachorro médio. Média cerca de 2 metros de comprimento e pesava em torno de 15 quilos.</p>
-    <ul>
-      <li>corpo leve e ágil;</li>
-      <li>cauda longa para equilíbrio;</li>
-      <li>dentes afiados;</li>
-      <li>uma grande garra curva em cada pé, usada para atacar presas.</li>
-    </ul>
-    <img src="../assents/img/vel.webp" height="500px" width="800px">
-    <p>Uma das descobertas mais importantes é que o Velociraptor tinha penas. Cientistas encontraram marcas nos ossos dos braços que mostram onde as penas ficavam presas, parecidas com as das aves modernas.</p>
-
-    <h2>Tricerátops</h2>
-    <p>O Tricerátopo foi um grande dinossauro herbívoro que viveu no final do Período Cretáceo, há cerca de 68 a 66 milhões de anos, na região que hoje corresponde à América do Norte.</p>
-    <p>O nome “Tricerátopo” significa “rosto com três chifres” e fazia parte do grupo dos ceratopsídeos, dinossauros herbívoros conhecidos pelos chifres e pela gola óssea.</p>
-    <ul>
-      <li>dois chifres longos acima dos olhos;</li>
-      <li>um chifre menor no nariz;</li>
-      <li>e uma grande placa óssea atrás da cabeça chamada gola.</li>
-    </ul>
-    <img src="../assents/img/tric.webp" height="500px" width="800px">
-    <p>Graças aos fósseis e vestígios, os cientistas conseguiram reconstruir a vida desse enorme herbívoro que dividiu o mundo pré-histórico com alguns dos predadores mais perigosos da Terra.</p>
-
-    <h2>Espinossauro</h2>
-    <p>O Espinossauro foi um dos maiores dinossauros carnívoros que já existiram. Ele viveu durante o Período Cretáceo, há cerca de 100 a 93 milhões de anos, na região onde hoje fica o norte da África.</p>
-    <p>O nome “Espinossauro” significa “lagarto espinho”, por causa das enormes estruturas ósseas em suas costas que formavam uma espécie de vela gigante.</p>
-    <ul>
-      <li>focinho longo parecido com o de um crocodilo;</li>
-      <li>dentes retos e afiados;</li>
-      <li>patas dianteiras fortes com grandes garras;</li>
-      <li>e uma grande vela nas costas.</li>
-    </ul>
-    <img src="../assents/img/est.webp" height="500px" width="800px">
-    <p>Os cientistas acreditam que ele passava muito tempo perto da água e se alimentava principalmente de peixes gigantes. Por isso, muitos paleontólogos consideram o Espinossauro um dinossauro semiaquático</p>
-
-    <h2>Braquiossauro</h2>
-    <p>O Braquiossauro foi um dos maiores dinossauros herbívoros que já viveram. Ele viveu durante o Período Jurássico, há cerca de 154 a 150 milhões de anos, na região onde hoje ficam os Estados Unidos e partes da África.</p>
-    <p>O nome “Braquiossauro” significa “lagarto braço”, porque suas patas dianteiras eram mais longas que as traseiras. Isso deixava seu corpo inclinado para trás e o pescoço muito alto.</p>
-    <ul>
-      <li>pescoço enorme para alcançar folhas altas;</li>
-      <li>cabeça relativamente pequena;</li>
-      <li>patas grossas e fortes;</li>
-      <li>e corpo muito pesado.</li>
-    </ul>
-    <img src="../assents/img/bra.webp" height="500px" width="800px">
-    <p>Os cientistas acreditam que ele precisava comer enormes quantidades de vegetação todos os dias para sustentar seu tamanho gigante.</p>
-  </div>
-  <div class="rodapé">
-    <footer>
-      <p>
-        The software is provided "AS IS", without warranty of any kind,
-        express or implied, including but not limited to the warranties of
-        merchantability, fitness for a particular purpose and noninfringement.
-        In no event shall the authors or copyright holders be liable for any
-        claim, damages or other liability, whether in an action of contract,
-        tort or otherwise, arising from, out of or in connection with the
-        software or the use or other dealings in the software.
-      </p>
-    </footer>
-  </div>
-</body>
-</html>
+    links.forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
+  });
+</script>
+</body></html>

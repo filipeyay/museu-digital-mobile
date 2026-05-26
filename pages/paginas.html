@@ -1,101 +1,302 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../assents/css/paginas.css" />
-  <title>Páginas</title>
-  <link rel="icon" href="../assents/img/dino.svg" type="image/svg+xml" />
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MUSEU DIGITAL - Seções</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#e2e2e2",
+                      "tertiary-container": "#d1e4ff",
+                      "inverse-primary": "#5d5f5f",
+                      "inverse-on-surface": "#303030",
+                      "surface-container-high": "#2a2a2a",
+                      "error-container": "#93000a",
+                      "primary": "#ffffff",
+                      "inverse-surface": "#e2e2e2",
+                      "muted-stone": "#252526",
+                      "on-background": "#e2e2e2",
+                      "surface-tint": "#c6c6c7",
+                      "surface-container-low": "#1b1b1b",
+                      "on-primary": "#2f3131",
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#0067ae",
+                      "outline-variant": "#444748",
+                      "on-tertiary-fixed": "#001d36",
+                      "on-error": "#690005",
+                      "surface-dim": "#131313",
+                      "secondary-container": "#1a99de",
+                      "surface": "#131313",
+                      "on-primary-container": "#636565",
+                      "tertiary-fixed": "#d1e4ff",
+                      "on-surface-variant": "#c4c7c8",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#c6c6c7",
+                      "on-primary-fixed-variant": "#454747",
+                      "secondary-fixed-dim": "#8fcdff",
+                      "on-tertiary-fixed-variant": "#00497d",
+                      "on-secondary": "#003450",
+                      "primary-container": "#e2e2e2",
+                      "on-primary-fixed": "#1a1c1c",
+                      "secondary-fixed": "#cbe6ff",
+                      "on-tertiary": "#003258",
+                      "tertiary-fixed-dim": "#9fcaff",
+                      "deep-earth": "#1a1a1a",
+                      "on-surface": "#e2e2e2",
+                      "on-secondary-fixed": "#001e30",
+                      "surface-container": "#1f1f1f",
+                      "surface-container-highest": "#353535",
+                      "surface-glass": "rgba(11, 11, 11, 0.7)",
+                      "surface-container-lowest": "#0e0e0e",
+                      "outline": "#8e9192",
+                      "divider-line": "rgba(255, 255, 255, 0.6)",
+                      "on-secondary-container": "#002d46",
+                      "surface-bright": "#393939",
+                      "background": "#131313",
+                      "on-secondary-fixed-variant": "#004b71",
+                      "tertiary": "#ffffff",
+                      "secondary": "#8fcdff",
+                      "surface-variant": "#353535"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "xl": "48px",
+                      "gutter-mobile": "16px",
+                      "lg": "24px",
+                      "xs": "4px",
+                      "margin-mobile": "20px",
+                      "md": "16px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "section-title": [
+                              "EB Garamond"
+                      ],
+                      "display-hero": [
+                              "EB Garamond"
+                      ],
+                      "headline-lg": [
+                              "EB Garamond"
+                      ],
+                      "headline-lg-mobile": [
+                              "EB Garamond"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "section-title": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-hero": [
+                              "70px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "10px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=EB+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.bloom-hover:hover, .bloom-hover:active {
+    text-shadow: 0 0 10px white
+    }
+.bg-texture-dark {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden bg-texture-dark">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-divider-line bg-surface-glass backdrop-blur-md">
+<div class="flex justify-between items-center h-16 px-margin-mobile w-full text-primary font-headline-lg-mobile text-headline-lg-mobile">
+<button class="scale-95 active:scale-90 transition-transform hover:opacity-80 transition-opacity" id="menu-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-widest uppercase">MUSEU DIGITAL</span>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-16 md:hidden flex flex-col">
+<!-- Paleontology Section -->
+<section class="relative h-[291px] flex items-end p-margin-mobile" data-alt="A highly detailed cinematic scene of a dusty paleontological excavation site at night, lit by dramatic, warm spotlights. Fossilized dinosaur bones emerge from dark, textured earth. The mood is mysterious and educational, capturing the awe of discovery in a dark, immersive environment with a focus on deep earth tones and stark contrast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface-glass to-transparent opacity-90"></div>
+<div class="relative z-10 w-full">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-sm font-bold tracking-tight" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Paleontologia</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Explore as eras pré-históricas e descubra as criaturas que moldaram o passado do nosso planeta através de fósseis raros.</p>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-label-sm text-label-sm uppercase py-sm px-md rounded-DEFAULT hover:bg-primary hover:text-deep-earth transition-colors bloom-hover">
+                    Começar
+                </button>
+</div>
+<div class="absolute bottom-0 left-margin-mobile right-margin-mobile h-[1px] bg-divider-line"></div>
+</section>
+<!-- History Section -->
+<section class="relative h-[291px] flex items-end p-margin-mobile" data-alt="A highly detailed cinematic scene depicting an ancient, dimly lit library or archive. Dusty scrolls, ancient artifacts, and weathered parchment are softly illuminated by a cool, ethereal light piercing through shadows. The atmosphere is quiet, authoritative, and deeply historical, emphasizing a premium museum aesthetic with dark shadows and tactile textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface-glass to-transparent opacity-90"></div>
+<div class="relative z-10 w-full">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-sm font-bold tracking-tight" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">História</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Mergulhe nas narrativas das civilizações antigas e compreenda a evolução da humanidade ao longo dos milênios.</p>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-label-sm text-label-sm uppercase py-sm px-md rounded-DEFAULT hover:bg-primary hover:text-deep-earth transition-colors bloom-hover">
+                    Começar
+                </button>
+</div>
+<div class="absolute bottom-0 left-margin-mobile right-margin-mobile h-[1px] bg-divider-line"></div>
+</section>
+<!-- Exhibition Section -->
+<section class="relative h-[300px] flex items-end p-margin-mobile" data-alt="A highly detailed cinematic view of a modern, dark museum exhibition hall. Sleek glass display cases illuminate rare artifacts with precise, cool white LED lighting against a backdrop of deep shadows and minimalist black architecture. The scene evokes a sophisticated, high-end gallery experience, blending modern design with ancient wonders." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlgD9MmRw_bMVdzsJkEIT8wYBQ8DyegwFS4tWJN87htOsJx2gOQX9nQlUdJgaJxJwxojr6Vh8L4mcOPcUe9PO1Phpj54W5Tl9zGeNRL8PYePgF0fhACJdwsKrQemFBU1tydXThxByDTsSj7bhhK71FhOCzd11zUwZ9XLq-JvGrUEKyTZ5E_TtJW1cy3lSAanLfpyvpcI3l22Jj8ufGKEIX9AVyBrd8YBcyyhBnT09y5iIGril9Cx8UdsSnIV8sroCaLDyWEZVtLRw'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface-glass to-transparent opacity-90"></div>
+<div class="relative z-10 w-full">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-sm font-bold tracking-tight" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Exibição</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Navegue por nossas galerias virtuais interativas e veja de perto as peças mais icônicas da nossa coleção.</p>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-label-sm text-label-sm uppercase py-sm px-md rounded-DEFAULT hover:bg-primary hover:text-deep-earth transition-colors bloom-hover">
+                    Começar
+                </button>
+</div>
+</section>
+</main>
+<!-- Desktop Notice (Hidden on Mobile) -->
+<div class="hidden md:flex flex-grow items-center justify-center p-xl text-center">
+<p class="font-headline-lg text-headline-lg text-on-surface-variant">Esta experiência é otimizada para dispositivos móveis. Por favor, redimensione a janela ou acesse via smartphone.</p>
+</div>
+<!-- Drawer Overlay -->
+<div class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300 opacity-0" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col py-lg h-full w-80 rounded-r-xl border-r border-divider-line shadow-xl bg-deep-earth transform -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="px-md mb-lg">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">EXPLORAÇÃO</h3>
+</div>
+<nav class="flex flex-col gap-sm">
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Início
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+                Explorar
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+                História
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="museum">museum</span>
+                Dinossauros
+            </a>
+<a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest transition-all rounded-lg font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+                Sobre Nós
+            </a>
+</nav>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const drawer = document.getElementById('nav-drawer');
+        const overlay = document.getElementById('drawer-overlay');
 
-<body>
-  <div class="cabeçalho">
-    <button onclick="history.go(-1)">←</button>
-    <p>MUSEU DIGITAL</p>
-    <a href="https://www.iesp.edu.br/">Faculdade</a>
-    <a href="sobre.html">Sobre nós</a>
-    <a href="../index.html">Home</a>
-  </div>
-  <div class="paleontologia-img"></div>
-  <div class="paleontologia">
-    <div>
-      <h1>Paleontologia</h1>
-      <br />
-      <p>
-        A ciência que investiga a vida pré-histórica. Através do estudo de
-        fósseis (ossos, pegadas e plantas),<br />os cientistas reconstroem a
-        evolução biológica e os ambientes de milhões de anos atrás.
-      </p>
-      <a href="paleontologia.html">
-        <button>Começar</button>
-      </a>
-    </div>
-  </div>
-  <div class="historia-img"></div>
-  <div class="historia">
-    <div>
-      <h1>Historia</h1>
-      <p>
-        A trajetória desses répteis durante a Era Mesozoica. Abrange desde o
-        seu surgimento, a diversificação em<br />gigantes e espécies
-        emplumadas, até a extinção em massa que poupou apenas a linhagem das
-        aves.
-      </p>
-      <a href="historia.html">
-        <button>Começar</button>
-      </a>
-    </div>
-  </div>
-  <div class="dinossauros-img"></div>
-  <div class="dinossauros">
-    <div>
-      <h1>Exibição</h1>
-      <p>
-        Aqui você vai conhecer alguns dos principais dinossauros que já
-        existiram.
-      </p>
-      <a href="dinossauros.html">
-        <button>Começar</button>
-      </a>
-    </div>
-  </div>
-  <div class="rodapé">
-    <footer>
-      <p>
-        The software is provided "AS IS", without warranty of any kind,
-        express or implied, including but not limited to the warranties of
-        merchantability, fitness for a particular purpose and noninfringement.
-        In no event shall the authors or copyright holders be liable for any
-        claim, damages or other liability, whether in an action of contract,
-        tort or otherwise, arising from, out of or in connection with the
-        software or the use or other dealings in the software.
-      </p>
-    </footer>
-  </div>
-  <!-- BOTAO DE SCROLL TOP -->
-  <button id="btnTop" onclick="scrollTopo()">↑</button>
+        function toggleDrawer() {
+            const isClosed = drawer.classList.contains('-translate-x-full');
+            if (isClosed) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                // Small delay to allow display block to apply before changing opacity
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    overlay.classList.add('opacity-100');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+                document.body.style.overflow = '';
+            }
+        }
 
-  <!-- INDICADOR DE CONTEUDO -->
-  <button id="indicador">↓</button>
-
-  <!-- #### CHATBOT #### -->
-  <button id="chat-botao" onclick="mostrarChat()">💬</button>
-
-  <div id="chat-container" style="display: none; flex-direction: column">
-    <div id="chat-log">
-      <ul id="perguntas-lista"></ul>
-    </div>
-
-    <div class="input-area">
-      <input type="number" id="usuario-input" placeholder="Digite o número da opção..." />
-      <button onclick="mandarMsg()">Enviar</button>
-    </div>
-  </div>
-
-  <script src="../assents/js/chatbot.js"></script>
-  <script src="../assents/js/scrolltop.js"></script>
-  <script src="../assents/js/indicador_rolagem.js"></script>
-</body>
-
-</html>
+        menuBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+    });
+</script>
+</body></html>

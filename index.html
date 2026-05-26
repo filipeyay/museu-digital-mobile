@@ -1,82 +1,381 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Página Principal</title>
-  <link rel="stylesheet" href="assents/css/style.css" />
-  <link rel="icon" href="assents/img/dino.svg" type="image/svg+xml" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Museu Digital - Home</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=EB+Garamond:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#e2e2e2",
+            "tertiary-container": "#d1e4ff",
+            "inverse-primary": "#5d5f5f",
+            "inverse-on-surface": "#303030",
+            "surface-container-high": "#2a2a2a",
+            "error-container": "#93000a",
+            "primary": "#ffffff",
+            "inverse-surface": "#e2e2e2",
+            "muted-stone": "#252526",
+            "on-background": "#e2e2e2",
+            "surface-tint": "#c6c6c7",
+            "surface-container-low": "#1b1b1b",
+            "on-primary": "#2f3131",
+            "error": "#ffb4ab",
+            "on-tertiary-container": "#0067ae",
+            "outline-variant": "#444748",
+            "on-tertiary-fixed": "#001d36",
+            "on-error": "#690005",
+            "surface-dim": "#131313",
+            "secondary-container": "#1a99de",
+            "surface": "#131313",
+            "on-primary-container": "#636565",
+            "tertiary-fixed": "#d1e4ff",
+            "on-surface-variant": "#c4c7c8",
+            "on-error-container": "#ffdad6",
+            "primary-fixed-dim": "#c6c6c7",
+            "on-primary-fixed-variant": "#454747",
+            "secondary-fixed-dim": "#8fcdff",
+            "on-tertiary-fixed-variant": "#00497d",
+            "on-secondary": "#003450",
+            "primary-container": "#e2e2e2",
+            "on-primary-fixed": "#1a1c1c",
+            "secondary-fixed": "#cbe6ff",
+            "on-tertiary": "#003258",
+            "tertiary-fixed-dim": "#9fcaff",
+            "deep-earth": "#1a1a1a",
+            "on-surface": "#e2e2e2",
+            "on-secondary-fixed": "#001e30",
+            "surface-container": "#1f1f1f",
+            "surface-container-highest": "#353535",
+            "surface-glass": "rgba(11, 11, 11, 0.7)",
+            "surface-container-lowest": "#0e0e0e",
+            "outline": "#8e9192",
+            "divider-line": "rgba(255, 255, 255, 0.6)",
+            "on-secondary-container": "#002d46",
+            "surface-bright": "#393939",
+            "background": "#131313",
+            "on-secondary-fixed-variant": "#004b71",
+            "tertiary": "#ffffff",
+            "secondary": "#8fcdff",
+            "surface-variant": "#353535"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "unit": "4px",
+            "xl": "48px",
+            "gutter-mobile": "16px",
+            "lg": "24px",
+            "xs": "4px",
+            "margin-mobile": "20px",
+            "md": "16px",
+            "sm": "8px"
+          },
+          "fontFamily": {
+            "body-md": [
+              "Inter"
+            ],
+            "label-sm": [
+              "JetBrains Mono"
+            ],
+            "body-lg": [
+              "Inter"
+            ],
+            "section-title": [
+              "EB Garamond"
+            ],
+            "display-hero": [
+              "EB Garamond"
+            ],
+            "headline-lg": [
+              "EB Garamond"
+            ],
+            "headline-lg-mobile": [
+              "EB Garamond"
+            ],
+            "caption": [
+              "Inter"
+            ]
+          },
+          "fontSize": {
+            "body-md": [
+              "16px",
+              {
+                "lineHeight": "1.5",
+                "fontWeight": "400"
+              }
+            ],
+            "label-sm": [
+              "12px",
+              {
+                "lineHeight": "1.4",
+                "letterSpacing": "0.05em",
+                "fontWeight": "500"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "1.6",
+                "fontWeight": "400"
+              }
+            ],
+            "section-title": [
+              "24px",
+              {
+                "lineHeight": "1.3",
+                "fontWeight": "500"
+              }
+            ],
+            "display-hero": [
+              "70px",
+              {
+                "lineHeight": "1.1",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "300"
+              }
+            ],
+            "headline-lg": [
+              "32px",
+              {
+                "lineHeight": "1.2",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg-mobile": [
+              "28px",
+              {
+                "lineHeight": "1.2",
+                "fontWeight": "400"
+              }
+            ],
+            "caption": [
+              "10px",
+              {
+                "lineHeight": "1.4",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .bloom-hover:hover {
+      text-shadow: 0 0 10px white;
+    }
+
+    .bloom-focus:focus {
+      box-shadow: 0 0 10px var(--color-tertiary);
+    }
+
+    .surface-glass-effect {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
 
-<body>
-  <div class="cabeçalho">
-    <p>MUSEU DIGITAL</p>
-    <a href="https://www.iesp.edu.br/">Faculdade</a>
-    <a href="pages/sobre.html">Sobre nós</a>
-  </div>
-  <div class="imagem-primária">
-    <div class="itens-primarios">
-      <h1>Acesse o Mundo Jurássico<br />sem sair de casa!</h1>
-      <p>Clique no botão abaixo para começar a aproveitar!</p>
-      <a href="pages/paginas.html">
-        <button>Entrar</button>
-      </a>
+<body
+  class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+  <!-- TopAppBar -->
+  <header
+    class="bg-surface-glass dark:bg-surface-glass backdrop-blur-md fixed top-0 w-full z-50 border-b border-divider-line flex justify-between items-center h-16 px-margin-mobile transition-all duration-300"
+    id="top-app-bar">
+    <button aria-label="Menu"
+      class="text-primary dark:text-primary hover:opacity-80 transition-opacity scale-95 active:scale-90 flex items-center justify-center p-sm"
+      id="menu-button">
+      <span class="material-symbols-outlined" data-icon="menu">menu</span>
+    </button>
+    <div class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-widest uppercase">
+      MUSEU DIGITAL
     </div>
-  </div>
-  <div class="informações">
-    <div class="informação-1">
-      <h1>$ Grátis</h1>
-      <hr />
-      <p>Conheça vários Dinossauros<br />de forma gratuita.</p>
+    <div class="w-10"></div> <!-- Placeholder for balance -->
+  </header>
+  <!-- NavigationDrawer Overlay -->
+  <div class="fixed inset-0 bg-background/80 z-[55] hidden transition-opacity" id="drawer-overlay"></div>
+  <!-- NavigationDrawer -->
+  <nav
+    class="fixed inset-y-0 left-0 z-[60] flex flex-col py-lg bg-deep-earth dark:bg-deep-earth h-full w-80 rounded-r-xl border-r border-divider-line shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out"
+    id="nav-drawer">
+    <div class="px-margin-mobile mb-xl">
+      <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">EXPLORAÇÃO</h2>
     </div>
-    <div class="informação-2">
-      <h1>✈︎ Online</h1>
-      <hr />
-      <p>Expência completa no<br />conforto de sua casa.</p>
+    <ul class="flex-1 overflow-y-auto space-y-sm">
+      <li>
+        <a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest rounded-lg font-body-md text-body-md"
+          href="#">
+          <span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+          Eras Geológicas
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest rounded-lg font-body-md text-body-md"
+          href="#">
+          <span class="material-symbols-outlined" data-icon="explore">explore</span>
+          Escavações
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest rounded-lg font-body-md text-body-md"
+          href="#">
+          <span class="material-symbols-outlined" data-icon="museum">museum</span>
+          Fósseis
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-md text-on-surface-variant px-md py-sm mx-sm hover:bg-surface-container-high transition-colors active:bg-surface-container-highest rounded-lg font-body-md text-body-md"
+          href="#">
+          <span class="material-symbols-outlined" data-icon="info">info</span>
+          Sobre o Museu
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Main Content -->
+  <main class="flex-1 pt-16 flex flex-col">
+    <!-- Hero Section -->
+    <section class="relative min-h-[751px] flex flex-col justify-end px-margin-mobile pb-xl overflow-hidden group">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-[10s] group-hover:scale-105"
+        data-alt="A cinematic, low-key lighting photograph of a massive T-Rex skeleton fossil mounted in a dark, moody museum exhibition hall. Dramatic spotlights highlight the intricate bone structure against a pitch-black background, evoking a sense of ancient mystery and discovery. The aesthetic is sophisticated, tactile, and deeply atmospheric, perfect for a high-end digital museum experience."
+        style="background-image: url('./assents/img/imagem-primaria.webp');">
+        <!-- Overlay Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+      </div>
+      <!-- Content -->
+      <div class="relative z-10 space-y-lg mb-xl mt-auto">
+        <h1 class="font-display-hero text-display-hero text-primary font-bold text-shadow-md"
+          style="font-size: 3rem; line-height: 1.1;">
+          Acesse o Mundo Jurássico sem sair de casa!
+        </h1>
+        <button
+          class="bg-transparent border-2 border-primary text-primary font-label-sm text-label-sm uppercase px-xl py-md rounded-DEFAULT hover:bg-primary hover:text-background transition-colors w-full text-center tracking-widest bloom-hover">
+          <a href="./pages/paginas.html">Entrar</a>
+        </button>
+      </div>
+    </section>
+    <!-- Information Cards (Bento-style layout for mobile) -->
+    <section class="px-margin-mobile py-xl space-y-md bg-surface-container-low">
+      <div class="text-center mb-lg">
+        <p class="font-body-lg text-body-lg text-on-surface-variant">Explore a história da vida na Terra com nosso museu
+          virtual de ponta.</p>
+      </div>
+      <!-- Card 1 -->
+      <div
+        class="bg-surface-glass surface-glass-effect border-t border-divider-line p-lg rounded-lg relative overflow-hidden group">
+        <div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-9xl text-primary"
+            data-icon="volunteer_activism">volunteer_activism</span>
+        </div>
+        <div class="relative z-10 flex flex-col gap-sm">
+          <span class="material-symbols-outlined text-primary text-3xl mb-xs bloom-hover"
+            data-icon="money_off">money_off</span>
+          <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Grátis</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Acesso livre a todo o acervo e exposições
+            temporárias.</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div
+        class="bg-surface-glass surface-glass-effect border-t border-divider-line p-lg rounded-lg relative overflow-hidden group">
+        <div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-9xl text-primary" data-icon="globe">globe</span>
+        </div>
+        <div class="relative z-10 flex flex-col gap-sm">
+          <span class="material-symbols-outlined text-primary text-3xl mb-xs bloom-hover" data-icon="wifi">wifi</span>
+          <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Online</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Disponível 24h por dia, de qualquer lugar do
+            mundo.</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="bg-surface-glass surface-glass-effect border-t border-divider-line p-lg rounded-lg relative overflow-hidden group">
+        <div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-9xl text-primary" data-icon="terminal">terminal</span>
+        </div>
+        <div class="relative z-10 flex flex-col gap-sm">
+          <span class="material-symbols-outlined text-primary text-3xl mb-xs bloom-hover" data-icon="code">code</span>
+          <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Open-source</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Código aberto para a comunidade expandir e
+            colaborar.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer
+    class="bg-surface dark:bg-surface w-full py-xl px-margin-mobile flex flex-col items-center gap-sm border-t border-divider-line">
+    <div class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-widest uppercase mb-sm">
+      MUSEU DIGITAL
     </div>
-    <div class="informação-3">
-      <h1>✔ Open-source</h1>
-      <hr />
-      <p>Transparência e respeito<br />com o usuário.</p>
+    <div class="flex gap-lg mb-md">
+      <a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100"
+        href="#">Privacidade</a>
+      <a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100"
+        href="#">Termos</a>
+      <a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-70 hover:opacity-100"
+        href="#">Contato</a>
     </div>
-  </div>
+    <p class="font-caption text-caption text-on-surface-variant opacity-50">
+      © 2024 MUSEU DIGITAL. TODOS OS DIREITOS RESERVADOS.
+    </p>
+  </footer>
+  <!-- Scripts -->
+  <script>
+    // Simple scroll effect for TopAppBar
+    let lastScrollY = window.scrollY;
+    const appBar = document.getElementById('top-app-bar');
 
-  <div class="imagem-secundária"></div>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        appBar.classList.add('shadow-lg');
+        appBar.classList.replace('bg-surface-glass', 'bg-surface/95');
+        appBar.classList.replace('dark:bg-surface-glass', 'dark:bg-surface/95');
+      } else {
+        appBar.classList.remove('shadow-lg');
+        appBar.classList.replace('bg-surface/95', 'bg-surface-glass');
+        appBar.classList.replace('dark:bg-surface/95', 'dark:bg-surface-glass');
+      }
+      lastScrollY = window.scrollY;
+    });
 
-  <!-- BOTAO DE SCROLL TOP -->
-  <button id="btnTop" onclick="scrollTopo()">↑</button>
+    // Hamburger menu functionality
+    const menuBtn = document.getElementById('menu-button');
+    const navDrawer = document.getElementById('nav-drawer');
+    const drawerOverlay = document.getElementById('drawer-overlay');
 
-  <!-- #### CHATBOT #### -->
-  <button id="chat-botao" onclick="mostrarChat()">💬</button>
+    function toggleMenu() {
+      navDrawer.classList.toggle('-translate-x-full');
+      drawerOverlay.classList.toggle('hidden');
+    }
 
-  <div id="chat-container" style="display: none; flex-direction: column">
-    <div id="chat-log">
-      <ul id="perguntas-lista"></ul>
-    </div>
-
-    <div class="input-area">
-      <input type="number" id="usuario-input" placeholder="Digite o número da opção..." />
-      <button onclick="mandarMsg()">Enviar</button>
-    </div>
-  </div>
-
-  <div class="rodapé">
-    <footer>
-      <p>
-        The software is provided "AS IS", without warranty of any kind,
-        express or implied, including but not limited to the warranties of
-        merchantability, fitness for a particular purpose and noninfringement.
-        In no event shall the authors or copyright holders be liable for any
-        claim, damages or other liability, whether in an action of contract,
-        tort or otherwise, arising from, out of or in connection with the
-        software or the use or other dealings in the software.
-      </p>
-    </footer>
-  </div>
-
-  <script src="./assents/js/chatbot.js"></script>
-  <script src="./assents/js/scrolltop.js"></script>
+    menuBtn.addEventListener('click', toggleMenu);
+    drawerOverlay.addEventListener('click', toggleMenu);
+  </script>
 </body>
 
 </html>
